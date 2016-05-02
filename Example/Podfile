@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PLSKit_Example', :exclusive => true do
+  pod 'PLSKit', :path => '../'
+end
+
+target 'PLSKit_Tests', :exclusive => true do
+  pod 'PLSKit', :path => '../'
+
+  
+end
