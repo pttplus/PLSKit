@@ -1,0 +1,14 @@
+PODS:
+  - PLSKit (0.1.0)
+
+DEPENDENCIES:
+  - PLSKit (from `../`)
+
+EXTERNAL SOURCES:
+  PLSKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PLSKit: 92c21c646bb9aa2ff7c49ae7df83d2502f66c07e
+
+COCOAPODS: 0.39.0

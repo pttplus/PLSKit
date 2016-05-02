@@ -8,8 +8,10 @@
 
 #import "PLSViewController.h"
 
-@interface PLSViewController ()
+#import "PLSBannerDemoViewController.h"
 
+@interface PLSViewController ()
+@property (strong, nonatomic) NSArray *demoViewControllers;
 @end
 
 @implementation PLSViewController
@@ -18,12 +20,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.demoViewControllers = @[@{@"name": @"PLSBanner", @"class": [PLSBannerDemoViewController class]}];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    id demoViewController = self.demoViewControllers[indexPath.row];
+    
+    id viewController = [demoViewController[@"class"] new];
+
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - UITableView DataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id demoViewController = self.demoViewControllers[indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = demoViewController[@"name"];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.demoViewControllers.count;
 }
 
 @end

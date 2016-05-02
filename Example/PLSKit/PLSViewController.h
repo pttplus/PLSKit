@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface PLSViewController : UIViewController
+@interface PLSViewController : UITableViewController
 
 @end
