@@ -11,6 +11,8 @@
 		0EC15D7E751CA62B4F37AB6862C48B0A /* PLSBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DB36A19C98A59A1E67FBC660DED3362 /* PLSBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1645BB5AF05F86B996BBBCFD988C4C4C /* Pods-PLSKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E76995AC2EE7C8D1F15FB2B459409 /* Pods-PLSKit_Tests-dummy.m */; };
 		2CD897E5FD009F01A90E0AFC6F559050 /* PLSKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C503C8C8DD316308A485420F12B184 /* PLSKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4435936C1CDE35CB005E05C8 /* PLSGridMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 4435936A1CDE35CB005E05C8 /* PLSGridMenu.h */; };
+		4435936D1CDE35CB005E05C8 /* PLSGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4435936B1CDE35CB005E05C8 /* PLSGridMenu.m */; };
 		4E310BD389C5126FDB088E2DF7744F5B /* Pods-PLSKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 790227EAD3EEF16E7E0B04F37B9D98A2 /* Pods-PLSKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54E15CE9C25629FB22151142ACF7D888 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		6A6D7827572BA37B4DAAD9695723B3EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -49,6 +51,8 @@
 		1E2EA191B0360D607DE91C36776A48E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223C284F808AD41F0FDE828E32093D4D /* Pods-PLSKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PLSKit_Example-resources.sh"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4435936A1CDE35CB005E05C8 /* PLSGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSGridMenu.h; sourceTree = "<group>"; };
+		4435936B1CDE35CB005E05C8 /* PLSGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSGridMenu.m; sourceTree = "<group>"; };
 		4541D7EBBF3BF355A8BE1CFA456150F5 /* Pods-PLSKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PLSKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		4E80E04F2B1FB427D5C84FFB58C3AAF0 /* Pods-PLSKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PLSKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4F544050855F98A3B3D7D3613ED1A711 /* PLSBanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PLSBanner.m; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/PLSKit";
+			sourceTree = "<group>";
+		};
+		443593691CDE35CB005E05C8 /* PLSGridMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4435936A1CDE35CB005E05C8 /* PLSGridMenu.h */,
+				4435936B1CDE35CB005E05C8 /* PLSGridMenu.m */,
+			);
+			path = PLSGridMenu;
 			sourceTree = "<group>";
 		};
 		6ACA0CCB4E879DFE7FB598245F793162 /* Pods-PLSKit_Tests */ = {
@@ -218,6 +231,7 @@
 		EF99863CF870C3150E0B05440771475C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				443593691CDE35CB005E05C8 /* PLSGridMenu */,
 				0788E544D58FAADD789506320EC3AE25 /* PLSBanner */,
 			);
 			path = Classes;
@@ -255,6 +269,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4435936C1CDE35CB005E05C8 /* PLSGridMenu.h in Headers */,
 				0EC15D7E751CA62B4F37AB6862C48B0A /* PLSBanner.h in Headers */,
 				2CD897E5FD009F01A90E0AFC6F559050 /* PLSKit-umbrella.h in Headers */,
 			);
@@ -365,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4435936D1CDE35CB005E05C8 /* PLSGridMenu.m in Sources */,
 				A6DE185B980C22A927E05B3EE3C07D14 /* PLSBanner.m in Sources */,
 				04FF101C66991A7446FEA34858AFCC8A /* PLSKit-dummy.m in Sources */,
 			);

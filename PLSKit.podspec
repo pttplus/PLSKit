@@ -32,6 +32,16 @@ PLSKit is a combination of tool set that used by PTT+ app.
 
   s.source_files = 'PLSKit/Classes/**/*'
   
+  s.subspec 'PLSGridMenu' do |sub|
+    s.requires_arc = true
+    s.source_files = 'PLSKit/Classes/PLSGridMenu/*.{h,m}'
+  end
+
+  s.subspec 'PLSBanner' do |sub|
+    s.requires_arc = true
+    s.source_files = 'PLSKit/Classes/PLSBanner/*.{h,m}'
+  end
+
   # s.resource_bundles = {
   #   'PLSKit' => ['PLSKit/Assets/*.png']
   # }
